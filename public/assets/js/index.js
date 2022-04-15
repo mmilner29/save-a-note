@@ -3,7 +3,6 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
-let noteId;
 
 
 if (window.location.pathname === '/notes') {
@@ -72,7 +71,6 @@ const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
-    id: noteId
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();
